@@ -2,14 +2,13 @@ import React, {PropsWithChildren, useCallback, useContext} from 'react';
 import {useMutation} from '@tanstack/react-query';
 import {useStorageState} from '../storage/sessionStorage';
 import {AuthContextType} from '../types/user-data-type.ts';
-import {signIn} from '../utils/authorizationQuery.ts';
+import {AuthContext} from './session-context.tsx';
+import {signIn} from '../requests/authorizationQuery.ts';
 
-const AuthContext = React.createContext<AuthContextType | undefined>(undefined);
-
-export function useSession(): AuthContextType {
+export function useSessionProvider(): AuthContextType {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useSession must be used within a SessionProvider');
+    throw new Error('useSessionProvider must be used within a SessionProvider');
   }
   return context;
 }
