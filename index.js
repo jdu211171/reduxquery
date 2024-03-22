@@ -8,7 +8,6 @@ import App from './App';
 import {name as appName} from './app.json';
 import {store} from './src/app/store';
 import {Provider} from 'react-redux';
-import PropTypes from 'prop-types';
 import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 
 function ReduxApp() {
@@ -18,9 +17,5 @@ function ReduxApp() {
     </Provider>
   );
 }
-
-ReduxApp.propTypes = {
-  store: PropTypes.object.isRequired,
-};
 
 AppRegistry.registerComponent(appName, () => gestureHandlerRootHOC(ReduxApp));
