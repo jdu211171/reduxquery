@@ -1,12 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
 import type {PropsWithChildren} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,6 +9,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import NetInfo from '@react-native-community/netinfo';
+import {onlineManager} from '@tanstack/react-query';
 
 import {
   Colors,
@@ -61,6 +56,12 @@ function App(): React.JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  onlineManager.setEventListener(setOnline => {
+    return NetInfo.addEventListener(state => {
+      setOnline(!!state.isConnected);
+    });
+  });
 
   return (
     <SafeAreaView style={backgroundStyle}>
