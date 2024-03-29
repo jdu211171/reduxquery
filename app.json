@@ -1,4 +1,7 @@
 {
   "name": "ReduxQuery",
-  "displayName": "ReduxQuery"
+  "displayName": "ReduxQuery",
+  "expo": {
+    "userInterfaceStyle": "automatic"
+  }
 }
