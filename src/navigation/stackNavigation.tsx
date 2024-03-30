@@ -1,12 +1,12 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeScreen} from '../views/Home.tsx';
+import Tabs from './tabNavigation';
 import {NavigationContainer} from '@react-navigation/native';
 import WelcomeScreen from '../views/Welcome.tsx';
 
 const Stack = createNativeStackNavigator();
 
-function AppNavigator() {
+function StackNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -14,11 +14,11 @@ function AppNavigator() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Tabs" component={Tabs} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default AppNavigator;
+export default StackNavigator;

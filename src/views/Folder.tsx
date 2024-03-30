@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useTheme} from '../hooks/use-theme.ts';
 
-function Home() {
+function Folder() {
   const {themeTextStyle, themeContainerStyle} = useTheme();
 
   return (
@@ -11,13 +11,13 @@ function Home() {
         style={{
           color: themeTextStyle,
         }}>
-        Home Screen
+        Folder Screen
       </Text>
     </View>
   );
 }
 
-export default Home;
+export default Folder;
 
 const styles = StyleSheet.create({
   container: {

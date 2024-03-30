@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useTheme} from '../hooks/use-theme.ts';
 
-function Home() {
+function Bookmark() {
   const {themeTextStyle, themeContainerStyle} = useTheme();
 
   return (
@@ -11,13 +11,13 @@ function Home() {
         style={{
           color: themeTextStyle,
         }}>
-        Home Screen
+        Bookmark Screen
       </Text>
     </View>
   );
 }
 
-export default Home;
+export default Bookmark;
 
 const styles = StyleSheet.create({
   container: {

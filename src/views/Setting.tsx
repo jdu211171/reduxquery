@@ -2,22 +2,21 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useTheme} from '../hooks/use-theme.ts';
 
-function Home() {
+function Setting() {
   const {themeTextStyle, themeContainerStyle} = useTheme();
-
   return (
     <View style={[styles.container, {backgroundColor: themeContainerStyle}]}>
       <Text
         style={{
           color: themeTextStyle,
         }}>
-        Home Screen
+        Setting Screen
       </Text>
     </View>
   );
 }
 
-export default Home;
+export default Setting;
 
 const styles = StyleSheet.create({
   container: {
