@@ -1,9 +1,9 @@
 import {View, Text, Pressable, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {LinearGradient} from 'expo-linear-gradient';
-import COLORS from '../constants/colors';
 import Button from '../components/Button';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import COLORS from '../constants/colors';
 
 type WelcomeScreenNavigationProp = NativeStackNavigationProp<any, any>;
 interface Props {

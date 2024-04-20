@@ -1,18 +1,15 @@
 export default {
   light: {
-    primary: '#1292B4',
+    primary: '#000',
     background: '#FFF',
-    card: '#F3F3F3',
-    text: '#444',
-    border: '#DAE1E7',
-    notification: '#222',
+    text: '#262626',
+    border: '#DAE1E7', // #DAE1E7
   },
   dark: {
-    primary: '#6AC6FF',
-    background: '#111',
-    card: '#121212',
-    text: '#FFF',
-    border: '#6A6A6A',
-    notification: '#FFA500',
+    primary: '#fff',
+    background: '#262626',
+    text: '#BDBFB7',
+    border: '#3F3F40', // #3F3F40
   },
+  success: '#2CAD3D',
 };

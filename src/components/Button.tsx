@@ -6,7 +6,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import React from 'react';
-import COLORS from '../constants/colors';
+import colors from '../constants/colors';
 
 interface ButtonProps {
   color?: string;
@@ -17,10 +17,10 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = props => {
-  const filledBgColor = props.color || COLORS.primary;
-  const outlinedColor = COLORS.white;
+  const filledBgColor = props.color || colors.primary;
+  const outlinedColor = colors.white;
   const bgColor = props.filled ? filledBgColor : outlinedColor;
-  const textColor = props.filled ? COLORS.white : COLORS.primary;
+  const textColor = props.filled ? colors.white : colors.primary;
 
   return (
     <TouchableOpacity
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   button: {
     paddingBottom: 16,
     paddingVertical: 10,
-    borderColor: COLORS.primary,
+    borderColor: colors.primary,
     borderWidth: 2,
     borderRadius: 12,
     alignItems: 'center',

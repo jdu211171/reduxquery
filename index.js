@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 import {onlineManager} from '@tanstack/react-query';
 import NetInfo from '@react-native-community/netinfo';
+import {ThemeContext} from './src/contexts/theme-context';
 
 onlineManager.setEventListener(setOnline => {
   return NetInfo.addEventListener(state => {
@@ -17,7 +18,9 @@ onlineManager.setEventListener(setOnline => {
 function ReduxApp() {
   return (
     <Provider store={store}>
-      <App />
+      <ThemeContext>
+        <App />
+      </ThemeContext>
     </Provider>
   );
 }
